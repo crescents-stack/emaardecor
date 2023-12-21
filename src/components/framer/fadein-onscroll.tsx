@@ -6,9 +6,9 @@ const FadeInOnScroll = ({ children }: { children: React.ReactNode }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0.5 1", "1 1"],
+    offset: ["0 1", "1.01 1"],
   });
-  const scaleProgress = useTransform(scrollYProgress, [0.5, 1], [0.5, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [1, 1]);
   return (
     <motion.div
       ref={ref}
