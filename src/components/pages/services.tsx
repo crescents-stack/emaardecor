@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FadeIn from "../framer/fadein";
 
 const Services = () => {
   return (
@@ -12,22 +13,23 @@ const Services = () => {
       <div className="flex flex-wrap items-center justify-center gap-10">
         {services.map((item: any) => {
           return (
-            <div
-              key={item.id}
-              className="relative min-w-[300px] h-[250px] [&>*:first-child]:hover:backdrop-filter-none hover:scale-[105%]"
-            >
-              <div className="absolute bottom-0 left-0 w-full h-[80px] backdrop-blur bg-white/60 flex items-center justify-center z-10">
-                <span className="text-xl md:text-2xl font-medium">
-                  {item.name}
-                </span>
-              </div>
-              <Image
-                src="/images/home/curtain1.jpg"
-                alt=""
-                width={1000}
-                height={1000}
-                className="w-full h-full"
-              />
+            <div key={item.id}>
+              <FadeIn>
+                <div className="relative min-w-[300px] h-[250px] [&>*:first-child]:hover:backdrop-filter-none hover:scale-[105%]">
+                  <div className="absolute bottom-0 left-0 w-full h-[80px] backdrop-blur bg-white/60 flex items-center justify-center z-10">
+                    <span className="text-xl md:text-2xl font-medium">
+                      {item.name}
+                    </span>
+                  </div>
+                  <Image
+                    src="/images/home/curtain1.jpg"
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="w-full h-full"
+                  />
+                </div>
+              </FadeIn>
             </div>
           );
         })}

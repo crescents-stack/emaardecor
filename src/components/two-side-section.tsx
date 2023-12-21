@@ -1,17 +1,48 @@
-"use client";
-
 import { BadgeCheck } from "lucide-react";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import FadeInOnScroll from "./framer/fadein-onscroll";
 
 const TwoSideSection = () => {
   return (
     <div className="container">
       {items.map((item: any) => {
+        const { key, title, p, image, features } = item;
         return (
           <section key={item.key} id={item.id}>
-            <SingleCard item={item} />
+            <FadeInOnScroll>
+              <div
+                className={`flex flex-col  ${
+                  key % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
+                } items-center justify-center gap-16 group`}
+              >
+                <div className="max-w-[500px]">
+                  <h2 className="inline-block text-3xl md:text-4xl xl:text-5xl font-bold border-b-4 md:group-hover:border-secondary border-secondary md:border-white text-primary  delay-300">
+                    {title}
+                  </h2>
+                  <p className="py-10 text-xl md:text-2xl leading-loose">{p}</p>
+                  <ul className=" flex flex-col gap-3">
+                    {features.map((feature: string, index: number) => {
+                      return (
+                        <li
+                          key={index}
+                          className="flex items-center gap-[8px] text-xl md:text-2xl"
+                        >
+                          <BadgeCheck className="stroke-[1.8px] stroke-secondary" />
+                          {feature}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+                <Image
+                  src={image}
+                  alt="image"
+                  width={1000}
+                  height={1000}
+                  className="w-full md:w-1/2 h-[500px]"
+                />
+              </div>
+            </FadeInOnScroll>
           </section>
         );
       })}
@@ -20,55 +51,6 @@ const TwoSideSection = () => {
 };
 
 export default TwoSideSection;
-
-const SingleCard = ({ item }: { item: any }) => {
-  const { key,  title, p, image, features } = item;
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0.5 1", "1 1"],
-  });
-  const scaleProgress = useTransform(scrollYProgress, [0.5,1],[0.5,1]);
-  return (
-    <motion.div
-      ref={ref}
-      style={{
-        scale: scaleProgress,
-        opacity: scrollYProgress,
-      }}
-      className={`flex flex-col  ${
-        key % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-      } items-center justify-center gap-16 group`}
-    >
-      <div className="max-w-[500px]">
-        <h2 className="inline-block text-3xl md:text-4xl xl:text-5xl font-bold border-b-4 md:group-hover:border-secondary border-secondary md:border-white text-primary  delay-300">
-          {title}
-        </h2>
-        <p className="py-10 text-xl md:text-2xl leading-loose">{p}</p>
-        <ul className=" flex flex-col gap-3">
-          {features.map((feature: string, index: number) => {
-            return (
-              <li
-                key={index}
-                className="flex items-center gap-[8px] text-xl md:text-2xl"
-              >
-                <BadgeCheck className="stroke-[1.8px] stroke-secondary" />
-                {feature}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <Image
-        src={image}
-        alt=""
-        width={1000}
-        height={1000}
-        className="w-full md:w-1/2 h-[500px]"
-      />
-    </motion.div>
-  );
-};
 
 const items = [
   {
