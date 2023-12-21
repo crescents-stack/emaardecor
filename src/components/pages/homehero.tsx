@@ -7,7 +7,7 @@ const HomeHero = () => {
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gradient-to-r from-black/80 to-black/30 z-10">
         <div className="container flex items-center justify-center md:justify-start">
           <FadeIn>
-            <div className="bg-white/80 backdrop-blur max-w-[500px] h-full flex flex-col gap-10 p-5 lg:p-10 border">
+            <div className="bg-white max-w-[500px] h-full flex flex-col gap-10 p-5 lg:p-10 border">
               <h1 className="text-primary font-semibold text-2xl lg:text-3xl">
                 Crafting Dreams, Defining Spaces
               </h1>
