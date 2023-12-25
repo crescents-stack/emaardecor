@@ -1,6 +1,6 @@
 import { BadgeCheck } from "lucide-react";
 import Image from "next/image";
-import FadeInOnScroll from "./framer/fadein-onscroll";
+import FadeIn from "./framer/fadein";
 
 const TwoSideSection = () => {
   return (
@@ -9,7 +9,7 @@ const TwoSideSection = () => {
         const { key, title, p, image, features } = item;
         return (
           <section key={item.key} id={item.id}>
-            <FadeInOnScroll>
+            <FadeIn>
               <div
                 className={`flex flex-col  ${
                   key % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
@@ -42,7 +42,7 @@ const TwoSideSection = () => {
                   className="w-full md:w-1/2 h-[500px]"
                 />
               </div>
-            </FadeInOnScroll>
+            </FadeIn>
           </section>
         );
       })}
