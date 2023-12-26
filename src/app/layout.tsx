@@ -9,7 +9,7 @@ import WhatsAppCall from "@/components/whatsapp";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "EMMAR DÉCOR",
+  title: "EMAAR DÉCOR",
   description: "We the EMAAR DÉCOR is for your need for Curtains & blinds, Sofa & cushions, Artificial grass & plants, Wall panels, Carpets, and, other services",
 };
 

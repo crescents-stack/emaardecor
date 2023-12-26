@@ -1,9 +1,8 @@
 import Link from "next/link";
 import BrandLogo from "./assets/brandlogo";
-import WhatsApp from "./assets/whatsapp";
 import MobileNav from "./mobile-nav";
-import { Facebook, Instagram, Mail, MapPin, Youtube } from "lucide-react";
-import TikTok from "./assets/tittok";
+import { Facebook, Instagram, MapPin } from "lucide-react";
+import TikTok from "./assets/tiktok";
 
 const Navbar = () => {
   return (
@@ -16,7 +15,7 @@ const Navbar = () => {
           <div className="flex item-center justify-start gap-[8px]">
             <MapPin className="w-[16px] h-[16px] stroke-[1.3px]" />
             <span className="text-[12px]">
-              Al Asmawi Building, Al Manama Street, Ras Al Khor 3, Dubai
+              34CR+MGP Dubai (25.0717024, 55.1413257)
             </span>
           </div>
           <div className="flex item-center justify-start gap-[10px]">
@@ -41,8 +40,6 @@ const Navbar = () => {
             >
               <TikTok className="stroke-[0.8px] w-[16px] h-[16px] hover:stroke-white md:cursor-pointer" />
             </Link>
-
-            {/* <Mail className="stroke-[1.3px] w-[16px] h-[16px] hover:stroke-white md:cursor-pointer" /> */}
           </div>
         </div>
       </div>

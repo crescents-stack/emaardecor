@@ -1,7 +1,7 @@
-import { Facebook, Instagram, Mail, Youtube } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import BrandLogo from "./assets/brandlogo";
 import Link from "next/link";
-import TikTok from "./assets/tittok";
+import TikTok from "./assets/tiktok";
 
 const Footer = () => {
   return (
@@ -9,9 +9,7 @@ const Footer = () => {
       <section className="container flex items-center justify-center gap-5">
         <div className="flex flex-col items-center justify-center gap-5">
           <BrandLogo className="w-[150px]" />
-          <p className="text-center">
-            Al Asmawi Building, Al Manama Street, Ras Al Khor 3, Dubai
-          </p>
+          <p className="text-center">34CR+MGP Dubai (25.0717024, 55.1413257)</p>
           <div className="flex item-center justify-center gap-[10px]">
             <Link
               href="https://facebook.com/profile.php?id=61554859595529"
