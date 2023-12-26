@@ -86,7 +86,7 @@ const items = [
     id: "lights",
     title: "Lights",
     p: "Transform your spaces with EmaarDecor's stylish wallpaper and photo frames. Elevate home and office aesthetics with curated designs, adding a personal touch to create a warm and professional ambiance.",
-    image: "/images/home/curtain1.jpg",
+    image: "/images/home/lights.jpg",
     features: [
       "Customizable Lighting",
       "Modern Designs",
@@ -100,7 +100,7 @@ const items = [
     id: "artificial-grass-&-plants",
     title: "Artificial Grass & Plants",
     p: "Transform your surroundings with EmaarDecor's lush artificial grass and lifelike plants. Ideal for homes and offices, our curated collection brings nature's touch, blending aesthetics and low-maintenance elegance",
-    image: "/images/home/curtain1.jpg",
+    image: "/images/home/grass.jpg",
     features: [
       "Lush Greenery",
       "Low Maintenance",
@@ -114,7 +114,7 @@ const items = [
     id: "wall-panels",
     title: "Wall Panels",
     p: "Transform your spaces with EmaarDecor's stylish wall panels. Blending form and function, our curated collection adds a touch of sophistication to any space, creating a visually appealing environment",
-    image: "/images/home/curtain1.jpg",
+    image: "/images/home/wall.jpg",
     features: [
       "Modern Wall Decor",
       "Functional Design",
@@ -128,7 +128,7 @@ const items = [
     id: "carpets",
     title: "Carpets",
     p: "Transform your home or office with EmaarDecor's exquisite carpets. Our curated collection blends style and comfort, adding a touch of luxury to your living or workspace ambiance.",
-    image: "/images/home/curtain1.jpg",
+    image: "/images/home/carpet.avif",
     features: [
       "Luxurious Texture",
       "Durable Materials",

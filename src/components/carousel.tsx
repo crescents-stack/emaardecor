@@ -14,23 +14,41 @@ export const HeroCarousel = () => {
         delay: 3500,
         disableOnInteraction: false,
       }}
-    //   pagination={{
-    //     clickable: true,
-    //   }}
-    //   navigation={true}
+      //   pagination={{
+      //     clickable: true,
+      //   }}
+      //   navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper"
     >
-      <SwiperSlide>
-        <div
-          className={`bg-[url('/images/home/image1.webp')] bg-cover bg-center min-h-[85vh] w-full`}
-        ></div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div
-          className={`bg-[url('/images/home/image1.webp')] bg-cover bg-center min-h-[85vh] w-full`}
-        ></div>
-      </SwiperSlide>
+      {images.map((item) => {
+        return (
+          <SwiperSlide key={item.id}>
+            <div
+              className={`${item.image} bg-cover bg-center min-h-[85vh] w-full`}
+            ></div>
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
+
+const images = [
+  {
+    id: 1,
+    image: "bg-[url('/images/home/image1.webp')]",
+  },
+  {
+    id: 2,
+    image: "bg-[url('/images/home/image2.jpeg')]",
+  },
+  {
+    id: 3,
+    image: "bg-[url('/images/home/image3.jpg')]",
+  },
+  {
+    id: 4,
+    image: "bg-[url('/images/home/image4.jpg')]",
+  },
+];

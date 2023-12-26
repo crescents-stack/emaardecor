@@ -1,13 +1,14 @@
+import Link from "next/link";
 import { HeroCarousel } from "../carousel";
 import FadeIn from "../framer/fadein";
 
 const HomeHero = () => {
   return (
     <div className="relative">
-      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gradient-to-r from-black/80 to-black/30 z-10">
+      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gradient-to-r from-black/90 to-black/40 z-10">
         <div className="container flex items-center justify-center md:justify-start">
           <FadeIn>
-            <div className="bg-white max-w-[500px] h-full flex flex-col gap-10 p-5 lg:p-10 border">
+            <div className="max-w-[500px] h-full flex flex-col gap-10 [&>*]:text-white">
               <h1 className="text-primary font-semibold text-2xl lg:text-3xl">
                 Crafting Dreams, Defining Spaces
               </h1>
@@ -19,9 +20,15 @@ const HomeHero = () => {
                 style with EmaarDecor, where every detail tells a captivating
                 story!
               </p>
-              <button className="px-[24px] py-[10px] bg-secondary hover:bg-primary hover:text-white border-[2px] border-primary/30 text-primary font-semibold active:scale-[98%] ">
-                Get a Service
-              </button>
+              <Link
+                href="https://wa.me/971544091984"
+                passHref={true}
+                target="_blank"
+              >
+                <button className="px-[24px] py-[10px] bg-secondary hover:bg-white hover:text-primary text-primary font-semibold active:scale-[98%] ">
+                  Get a Service
+                </button>
+              </Link>
             </div>
           </FadeIn>
         </div>
