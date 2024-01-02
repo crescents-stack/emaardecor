@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="flex item-center justify-start gap-[8px]">
             <MapPin className="w-[16px] h-[16px] stroke-[1.3px]" />
             <span className="text-[12px]">
-              34CR+MGP Dubai (25.0717024, 55.1413257)
+              Al Shafar Tower 1, Al barsha heights, Dubai, UAE
             </span>
           </div>
           <div className="flex item-center justify-start gap-[10px]">

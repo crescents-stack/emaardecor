@@ -9,7 +9,10 @@ const Footer = () => {
       <section className="container flex items-center justify-center gap-5">
         <div className="flex flex-col items-center justify-center gap-5">
           <BrandLogo className="w-[150px]" />
-          <p className="text-center">34CR+MGP Dubai (25.0717024, 55.1413257)</p>
+          <p className="text-center">
+            Al Shafar Tower 1, Al barsha heights, Dubai,
+            UAE
+          </p>
           <div className="flex item-center justify-center gap-[10px]">
             <Link
               href="https://facebook.com/profile.php?id=61554859595529"

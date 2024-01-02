@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-export const HeroCarousel = () => {
+export const ProductCarousel = ({ images }: { images: any }) => {
   return (
     <Swiper
       spaceBetween={30}
@@ -16,11 +16,12 @@ export const HeroCarousel = () => {
       modules={[Autoplay, Pagination, Navigation]}
       className="mySwiper"
     >
-      {images.map((item) => {
+      {images.map((item: any, index: number) => {
+        console.log(item);
         return (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide key={index}>
             <div
-              className={`${item.image} bg-cover bg-center min-h-[85vh] w-full`}
+              className={`${item} bg-cover bg-center min-h-[500px] w-full`}
             ></div>
           </SwiperSlide>
         );
@@ -28,22 +29,3 @@ export const HeroCarousel = () => {
     </Swiper>
   );
 };
-
-const images = [
-  {
-    id: 1,
-    image: "bg-[url('/images/home/image1.webp')]",
-  },
-  {
-    id: 2,
-    image: "bg-[url('/images/home/image2.jpeg')]",
-  },
-  {
-    id: 3,
-    image: "bg-[url('/images/home/image3.jpg')]",
-  },
-  {
-    id: 4,
-    image: "bg-[url('/images/home/image4.jpg')]",
-  },
-];
